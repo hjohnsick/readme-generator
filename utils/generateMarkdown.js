@@ -6,13 +6,13 @@ function renderLicenseBadge(license) {
   }
 
   if (license == "MIT") {
-    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
+    return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
   } else if (license == "Mozilla") {
-    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]";
+    return "![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)";
   } else if (license == "Eclipse") {
-    return "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)]";
+    return "![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)";
   } else if (license == "Apache") {
-    return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]";
+    return "![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)";
   }
 }
 
@@ -24,13 +24,13 @@ function renderLicenseLink(license) {
   }
 
   if (license == "MIT") {
-    return "https://opensource.org/licenses/MIT";
+    return "[MIT](https://opensource.org/licenses/MIT)";
   } else if (license == "Mozilla") {
-    return "https://opensource.org/licenses/MPL-2.0";
+    return "[Mozilla](https://opensource.org/licenses/MPL-2.0)";
   } else if (license == "Eclipse") {
-    return "https://opensource.org/licenses/EPL-1.0";
+    return "[Eclipse](https://opensource.org/licenses/EPL-1.0)";
   } else if (license == "Apache") {
-    return "https://opensource.org/licenses/Apache-2.0";
+    return "[Apache](https://opensource.org/licenses/Apache-2.0)";
   }
 }
 
@@ -50,20 +50,21 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
     return `# ${data.title}
-    ## Description
-    ${data.description}
-    ## Table of Contents
-    ## Installation
-    ${data.installation}
-    ## Usage
-    ${data.usage}
-    
-    ${data.licenses}
-    ## Contributing
-    ${data.contribution}
-    ## Tests
-    ${data.test}
-    ## Questions
+${renderLicenseBadge(data.licenses)}
+## Description
+${data.description}
+## Table of Contents
+## Installation
+${data.installation}
+## Usage
+${data.usage}
+
+${data.licenses}
+## Contributing
+${data.contribution}
+## Tests
+${data.test}
+## Questions
 `;
 }
 
