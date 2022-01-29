@@ -18,7 +18,7 @@ const questions = [ {
 },
 {
     type: "input",
-    name: "instructions",
+    name: "installation",
     message: "Enter installation instructions"
 },
 {
@@ -28,7 +28,7 @@ const questions = [ {
 },
 {
     type: "input",
-    name: "guidelines",
+    name: "contribution",
     message: "Enter contribution guidelines",
 },
 {
@@ -37,8 +37,8 @@ const questions = [ {
     message: "Enter test instructions",
 },
 {
-    type: "checkbox",
-    name: "licesnses",
+    type: "list",
+    name: "licenses",
     message: "Choose a license",
     choices: [
         "MIT",
@@ -58,16 +58,6 @@ const questions = [ {
     message: "Enter your email address"
 }
 ];
-
-// const promptUser = () => {
-//     return inquirer.prompt([
-//         {
-//             type: "input",
-//             name: "title",
-//             message: "What is your project title?",
-//         }
-//     ])
-// }
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -95,8 +85,6 @@ function init() {
 // Function call to initialize app
 init()
     .then((answers) => {
-        // console.log(answers.title);
-        // console.log(generateMarkdown(answers));
         return writeToFile('./dist/README.md', generateMarkdown(answers));
     }).then(writeFileResponse => {
         console.log(writeFileResponse);
