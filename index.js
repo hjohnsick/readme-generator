@@ -98,6 +98,8 @@ init()
         // console.log(answers.title);
         // console.log(generateMarkdown(answers));
         return writeToFile('./dist/README.md', generateMarkdown(answers));
+    }).then(writeFileResponse => {
+        console.log(writeFileResponse);
     })
     .catch(err => {
         console.log(err);
