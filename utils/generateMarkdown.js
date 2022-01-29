@@ -50,17 +50,22 @@ This application is covered under the ${license} license.  More information can 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
     const url = `https://github.com/${data.name}`;
-    const tableOfContentsUrl = `${url}/${data.title}/tree/dist#`;
+    const tableOfContentsUrl = `${url}/${data.title}/tree/main/dist#`;
     return `# ${data.title}
 ${renderLicenseBadge(data.licenses)}
 ## Description
 ${data.description}
 ## Table of Contents
 [Installation](${tableOfContentsUrl}installation)
+
 [Usage](${tableOfContentsUrl}usage)
+
 [License](${tableOfContentsUrl}license)
+
 [Contributing](${tableOfContentsUrl}contributing)
+
 [Tests](${tableOfContentsUrl}tests)
+
 [Questions](${tableOfContentsUrl}questions)
 ## Installation
 ${data.installation}
@@ -72,8 +77,7 @@ ${data.contribution}
 ## Tests
 ${data.test}
 ## Questions
-This repo was created by, ${data.name}.
-[Link to Github profile](${url})
+This repo was created by, [${data.name}](${url}).
 For questions, email: ${data.email}
 `;
 }
