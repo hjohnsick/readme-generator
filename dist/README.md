@@ -1,16 +1,21 @@
 # Readme-Generator
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]
+![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
 ## Description
-This sets up a readme
+Generates a readme
 ## Table of Contents
 ## Installation
-n
+clone repo
 ## Usage
 n
 
-Mozilla
+## License
+This application is covered under the Apache license.  More information can be found here, [Apache](https://opensource.org/licenses/Apache-2.0).
+    
 ## Contributing
 n
 ## Tests
 n
 ## Questions
+This repo was created by, hjohnsick.
+[Link to Github profile](https://github.com/hjohnsick)
+For questions, email: hjohnsick@yahoo.com

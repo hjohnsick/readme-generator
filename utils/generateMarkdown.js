@@ -42,8 +42,8 @@ function renderLicenseSection(license) {
   }
 
   return `
-    ## License
-    This application is covered under the ${license} license.  More information can be found here, ${renderLicenseLink(data.license)}.
+## License
+This application is covered under the ${license} license.  More information can be found here, ${renderLicenseLink(license)}.
     `;
 }
 
@@ -58,13 +58,15 @@ ${data.description}
 ${data.installation}
 ## Usage
 ${data.usage}
-
-${data.licenses}
+${renderLicenseSection(data.licenses)}
 ## Contributing
 ${data.contribution}
 ## Tests
 ${data.test}
 ## Questions
+This repo was created by, ${data.name}.
+[Link to Github profile](https://github.com/${data.name})
+For questions, email: ${data.email}
 `;
 }
 
