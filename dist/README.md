@@ -1,20 +1,26 @@
 # Readme-Generator
-![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
+![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)
 ## Description
-Generates a readme
+The Readme-Generator uses inquirer to prompt for input via the commandline.  The application uses file system to write a markdown file to generate a readme based on the users input
 ## Table of Contents
+[Installation](https://github.com/hjohnsick/Readme-Generator/tree/dist#installation)
+[Usage](https://github.com/hjohnsick/Readme-Generator/tree/dist#usage)
+[License](https://github.com/hjohnsick/Readme-Generator/tree/dist#license)
+[Contributing](https://github.com/hjohnsick/Readme-Generator/tree/dist#contributing)
+[Tests](https://github.com/hjohnsick/Readme-Generator/tree/dist#tests)
+[Questions](https://github.com/hjohnsick/Readme-Generator/tree/dist#questions)
 ## Installation
-clone repo
+Clone the repo.  Enter npm install into the command line.  Once the node modules have installed you can run node index.
 ## Usage
-n
+To generate a readme.
 
 ## License
-This application is covered under the Apache license.  More information can be found here, [Apache](https://opensource.org/licenses/Apache-2.0).
+This application is covered under the Mozilla license.  More information can be found here, [Mozilla](https://opensource.org/licenses/MPL-2.0).
     
 ## Contributing
-n
+To contribute, fork repo and submit a pull request.
 ## Tests
-n
+No test suites have been added
 ## Questions
 This repo was created by, hjohnsick.
 [Link to Github profile](https://github.com/hjohnsick)
