@@ -2,6 +2,8 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
 const generateMarkdown = require("./utils/generateMarkdown.js");
+const { reject } = require("lodash");
+const { resolve } = require("path/posix");
 
 // TODO: Create an array of questions for user input
 const questions = [ {
@@ -68,7 +70,22 @@ const questions = [ {
 // }
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile(fileName, data, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+    
+            resolve({
+                ok: true,
+                message: 'File created!'
+            });
+        });
+    });
+    
+};
 
 // TODO: Create a function to initialize app
 function init() {
@@ -78,5 +95,10 @@ function init() {
 // Function call to initialize app
 init()
     .then((answers) => {
-        console.log(answers.title);
+        // console.log(answers.title);
+        // console.log(generateMarkdown(answers));
+        return writeToFile('./dist/README.md', generateMarkdown(answers));
+    })
+    .catch(err => {
+        console.log(err);
     });
